@@ -15,7 +15,7 @@ else
 fi
 
 # build nginx with ssl and httpv2 support
-cd nginx-1.18.0
+pushd nginx-1.18.0
 ./configure --with-http_ssl_module --with-http_v2_module
 make
 sudo make install
@@ -63,5 +63,6 @@ sudo bash -c 'cat > /etc/logrotate.d/nginx' << EOF
 }
 EOF
 
+popd
 rm -rf nginx-1.18.0
 echo "nginx install finish."
