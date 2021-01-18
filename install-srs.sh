@@ -3,7 +3,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 
 # install dependencies
-sudo apt-get -y install git build-essential libssl-dev
+sudo apt-get -y install git build-essential libssl-dev python
 
 # download srs
 if [ -d "./srs" ]
@@ -11,7 +11,7 @@ then
 	echo "srs already exists"
 else
 	echo "clone srs..."
-	git clone https://gitee.com/winlinvip/srs.oschina.git srs
+	git clone https://github.com/ossrs/srs.git
 fi
 
 
