@@ -62,4 +62,6 @@ sudo bash -c 'cat > /etc/logrotate.d/nginx' << EOF
         notifempty
 }
 EOF
+
+rm -rf nginx-1.18.0
 echo "nginx install finish."
